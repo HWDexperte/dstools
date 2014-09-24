@@ -5,7 +5,7 @@
 // @include     *.die-staemme.de/game.php*
 // @updateURL   https://github.com/HWDexperte/dstools/raw/master/storage_color.user.js
 // @downloadURL https://github.com/HWDexperte/dstools/raw/master/storage_color.user.js
-// @version     1.0
+// @version     1.1
 // @grant       none
 // ==/UserScript==
 
@@ -69,4 +69,4 @@ function main() {
     append_percentage(iron, calc_percentage(get_value(iron), capacity));
 }
 
-main();
+window.setInterval(main(), 5000);
