@@ -3,6 +3,8 @@
 // @namespace   storage-colors
 // @description Colors the storage values in the overview
 // @include     *.die-staemme.de/game.php*
+// @updateURL   https://github.com/HWDexperte/dstools/raw/master/storage_color.user.js
+// @downloadURL https://github.com/HWDexperte/dstools/raw/master/storage_color.user.js
 // @version     1.0
 // @grant       none
 // ==/UserScript==
