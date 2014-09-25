@@ -5,7 +5,7 @@
 // @include     *.die-staemme.de/game.php*
 // @updateURL   https://github.com/HWDexperte/dstools/raw/master/storage_color.user.js
 // @downloadURL https://github.com/HWDexperte/dstools/raw/master/storage_color.user.js
-// @version     1.1
+// @version     1.2
 // @grant       none
 // ==/UserScript==
 
@@ -36,14 +36,11 @@ function get_colorized_percentage_span(percentage) {
     return label_span;
 }
 
-function append_percentage(element, percentage) {
+function get_table(element, element_name, percentage) {
     sepchar = document.createTextNode('- ');
     sepchar_span = document.createElement('span');
 
     label_span = get_colorized_percentage_span(percentage);
-
-    label_td = document.createElement('td');
-    label_td.className = 'box-item';
 
     wrapper_span = document.createElement('span');
     wrapper_span.style.whiteSpace = 'nowrap';
@@ -51,22 +48,51 @@ function append_percentage(element, percentage) {
     sepchar_span.appendChild(sepchar);
     wrapper_span.appendChild(sepchar_span);
     wrapper_span.appendChild(label_span);
+
+    label_td = document.createElement('td');
+    label_td.className = 'box-item';
+    label_td.id = element_name;
+
     label_td.appendChild(wrapper_span);
+
+    return label_td;
+}
+
+function append_percentage(element, element_name, percentage) {
+    label_td = get_table(element, element_name, percentage);
 
     element.parentNode.parentNode.insertBefore(label_td, element.parentNode.nextSibling);
 }
 
-function main() {
-    text = document.createTextNode('Hallo');
+function update_percentage(element, element_name, percentage) {
+    label_td = get_table(element, element_name, percentage);
 
+    old_label_td = document.getElementById(element_name);
+
+    old_label_td.parentNode.replaceChild(label_td, old_label_td);
+}
+
+function main() {
     wood  = document.getElementById('wood');
     stone = document.getElementById('stone');
     iron  = document.getElementById('iron');
 
     capacity = get_capacity();
-    append_percentage(wood, calc_percentage(get_value(wood), capacity));
-    append_percentage(stone, calc_percentage(get_value(stone), capacity));
-    append_percentage(iron, calc_percentage(get_value(iron), capacity));
+    append_percentage(wood, 'sc_wood', calc_percentage(get_value(wood), capacity));
+    append_percentage(stone, 'sc_stone', calc_percentage(get_value(stone), capacity));
+    append_percentage(iron, 'sc_iron', calc_percentage(get_value(iron), capacity));
 }
 
-window.setInterval(main(), 5000);
+function update() {
+    wood  = document.getElementById('wood');
+    stone = document.getElementById('stone');
+    iron  = document.getElementById('iron');
+
+    capacity = get_capacity();
+    update_percentage(wood, 'sc_wood', calc_percentage(get_value(wood), capacity));
+    update_percentage(stone, 'sc_stone', calc_percentage(get_value(stone), capacity));
+    update_percentage(iron, 'sc_iron', calc_percentage(get_value(iron), capacity));
+}
+
+main();
+window.setInterval(update, 2500);
