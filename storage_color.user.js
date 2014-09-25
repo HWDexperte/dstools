@@ -5,7 +5,7 @@
 // @include     *.die-staemme.de/game.php*
 // @updateURL   https://github.com/HWDexperte/dstools/raw/master/storage_color.user.js
 // @downloadURL https://github.com/HWDexperte/dstools/raw/master/storage_color.user.js
-// @version     1.2
+// @version     1.2.1
 // @grant       none
 // ==/UserScript==
 
@@ -28,7 +28,9 @@ function get_colorized_percentage_span(percentage) {
     label_span.appendChild(label);
     if (percentage < 30) {
         label_span.style.color = '#007A00';
-    } else if (percentage < 60) {
+    } else if (percentage < 55) {
+        label_span.style.color = '#6BB224';
+    } else if (percentage < 75) {
         label_span.style.color = '#B24700';
     } else {
         label_span.style.color = 'red';
