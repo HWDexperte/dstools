@@ -2,9 +2,9 @@
 // @name        storage-colors
 // @namespace   storage-colors
 // @include     *.die-staemme.de/game.php*
-// @updateURL   https://github.com/HWDexperte/dstools/raw/master/storage_color.user.js
-// @downloadURL https://github.com/HWDexperte/dstools/raw/master/storage_color.user.js
-// @version     1.2.1
+// @updateURL   https://github.com/HWDexperte/dstools/raw/master/scripts/storage-colors.user.js
+// @downloadURL https://github.com/HWDexperte/dstools/raw/master/scripts/storage-colors.user.js
+// @version     1.2.2
 // @grant       none
 // ==/UserScript==
 

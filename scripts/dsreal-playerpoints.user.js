@@ -2,9 +2,9 @@
 // @name        dsreal-playerpoints
 // @namespace   dsreal-playerpoints
 // @include     *.die-staemme.de/game.php?village=*&id=*&screen=info_player*
-// @updateURL   https://github.com/HWDexperte/dstools/raw/master/dsreal_playerpoints.user.js
-// @downloadURL https://github.com/HWDexperte/dstools/raw/master/dsreal_playerpoints.user.js
-// @version     1.0
+// @updateURL   https://github.com/HWDexperte/dstools/raw/master/scripts/dsreal-playerpoints.user.js
+// @downloadURL https://github.com/HWDexperte/dstools/raw/master/scripts/dsreal-playerpoints.user.js
+// @version     1.1
 // @grant       none
 // ==/UserScript==
 
