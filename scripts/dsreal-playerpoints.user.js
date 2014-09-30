@@ -1,7 +1,6 @@
 // ==UserScript==
 // @name        dsreal-playerpoints
 // @namespace   dsreal-playerpoints
-// @description Show a player points graph in his Profile from dsreal.de
 // @include     *.die-staemme.de/game.php?village=*&id=*&screen=info_player*
 // @updateURL   https://github.com/HWDexperte/dstools/raw/master/dsreal_playerpoints.user.js
 // @downloadURL https://github.com/HWDexperte/dstools/raw/master/dsreal_playerpoints.user.js

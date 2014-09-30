@@ -1,7 +1,6 @@
 // ==UserScript==
 // @name        storage-colors
 // @namespace   storage-colors
-// @description Colors the storage values in the overview
 // @include     *.die-staemme.de/game.php*
 // @updateURL   https://github.com/HWDexperte/dstools/raw/master/storage_color.user.js
 // @downloadURL https://github.com/HWDexperte/dstools/raw/master/storage_color.user.js
