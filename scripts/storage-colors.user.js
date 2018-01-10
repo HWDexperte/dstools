@@ -1,10 +1,11 @@
 // ==UserScript==
 // @name        storage-colors
-// @namespace   storage-colors
+// @description Fügt eine farbige & prozentuale Anzeige zum Lagerfüllstand der jeweiligen Rohstoffe an
+// @namespace   https://github.com/fechnert/dstools
 // @include     *.die-staemme.de/game.php*
-// @updateURL   https://github.com/HWDexperte/dstools/raw/master/scripts/storage-colors.user.js
-// @downloadURL https://github.com/HWDexperte/dstools/raw/master/scripts/storage-colors.user.js
-// @version     1.2.2
+// @updateURL   https://raw.githubusercontent.com/fechnert/dstools/master/scripts/storage-colors.user.js
+// @downloadURL https://raw.githubusercontent.com/fechnert/dstools/master/scripts/storage-colors.user.js
+// @version     1.2.3
 // @grant       none
 // ==/UserScript==
 
