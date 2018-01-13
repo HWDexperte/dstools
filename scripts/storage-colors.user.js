@@ -5,7 +5,7 @@
 // @include     *.die-staemme.de/game.php*
 // @updateURL   https://raw.githubusercontent.com/fechnert/dstools/master/scripts/storage-colors.user.js
 // @downloadURL https://raw.githubusercontent.com/fechnert/dstools/master/scripts/storage-colors.user.js
-// @version     1.2.4
+// @version     1.2.5
 // @grant       none
 // ==/UserScript==
 
@@ -26,8 +26,6 @@ function get_colorized_percentage_span(percentage) {
     label_span = document.createElement('span');
     label_span.className = 'res';
     label_span.appendChild(label);
-
-    console.log(percentage);
 
     var hue=((1-(percentage/100))*120).toString(10);
     label_span.style.color = ["hsl(",hue,",85%,35%)"].join("");
