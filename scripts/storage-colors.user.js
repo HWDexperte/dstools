@@ -5,7 +5,7 @@
 // @include     *.die-staemme.de/game.php*
 // @updateURL   https://raw.githubusercontent.com/fechnert/dstools/master/scripts/storage-colors.user.js
 // @downloadURL https://raw.githubusercontent.com/fechnert/dstools/master/scripts/storage-colors.user.js
-// @version     1.2.3
+// @version     1.2.4
 // @grant       none
 // ==/UserScript==
 
