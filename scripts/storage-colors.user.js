@@ -22,19 +22,16 @@ function calc_percentage(value, capacity) {
 }
 
 function get_colorized_percentage_span(percentage) {
-    label = document.createTextNode(percentage + '%'); 
+    label = document.createTextNode(percentage + '%');
     label_span = document.createElement('span');
     label_span.className = 'res';
     label_span.appendChild(label);
-    if (percentage < 30) {
-        label_span.style.color = '#007A00';
-    } else if (percentage < 55) {
-        label_span.style.color = '#6BB224';
-    } else if (percentage < 75) {
-        label_span.style.color = '#B24700';
-    } else {
-        label_span.style.color = 'red';
-    }
+
+    console.log(percentage);
+
+    var hue=((1-(percentage/100))*120).toString(10);
+    label_span.style.color = ["hsl(",hue,",85%,35%)"].join("");
+
     return label_span;
 }
 
@@ -97,4 +94,4 @@ function update() {
 }
 
 main();
-window.setInterval(update, 2500);
+window.setInterval(update, 5000);
